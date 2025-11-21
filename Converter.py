@@ -70,3 +70,12 @@ def romanToInt(s):
             i = i + 1
 
     return total
+
+
+def intToRoman(s):
+    s = int(s)
+    total = 0
+    i = 0
+
+    while i < len(s):
+

@@ -74,8 +74,19 @@ def romanToInt(s):
 
 def intToRoman(s):
     s = int(s)
-    total = 0
+    newstr = ""
+
+
+    keys = list(intToNumeral.keys())
+    keys.sort()
+    keys.reverse()
+
     i = 0
+    while i < len(keys):
+        val = keys[i]
+        while s >= val:
+            newstr = newstr + intToNumeral[val]
+            s = s - val
+        i = i + 1
 
-    while i < len(s):
-
+    return newstr
